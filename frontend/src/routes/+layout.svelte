@@ -1,15 +1,6 @@
 <script>
-    import { onMount } from 'svelte';
 	import '../app.css';
-    import { goto } from '$app/navigation';
 	import { Toaster } from "$lib/components/ui/sonner/index.js";
-	onMount(async () => {
-		// 检查是否登录
-		const res = true
-		if (!res) {
-			goto('/login')
-		}
-	})	
 	let { children } = $props();
 </script>
 

@@ -8,6 +8,7 @@ import (
 	"io"
 	"net/http"
 	"os"
+	"path/filepath"
 	"strconv"
 	"time"
 
@@ -33,9 +34,15 @@ type App struct {
 
 // NewApp creates a new App application struct
 func NewApp() *App {
+	homedir, err := os.UserHomeDir()
+	if err != nil {
+		panic(err)
+	}
+	configPath := filepath.Join(homedir, ".bili-start-live-helper")
+	os.MkdirAll(configPath, os.ModePerm)
 	jar, _ := cookiejar.New(&cookiejar.Options{
 		PublicSuffixList: publicsuffix.List,
-		Filename:         COOKIES_SAVE_PATH,
+		Filename:         filepath.Join(configPath, COOKIES_SAVE_PATH),
 	})
 	client := &http.Client{
 		Jar: jar,
