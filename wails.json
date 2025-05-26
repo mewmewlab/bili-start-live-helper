@@ -1,0 +1,21 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "bili-start-live-helper",
+  "outputfilename": "bili-start-live-helper",
+  "frontend:install": "pnpm install",
+  "frontend:build": "pnpm run build",
+  "frontend:dev:watcher": "pnpm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "miRemid",
+    "email": "mail@thinkmoe.icu"
+  },
+  "Info": {
+    "companyName": "miRemid",
+    "productName": "bili-start-live-helper",
+    "productVersion": "v0.0.1",
+    "copyright": "Copyright miRemid",
+    "comments": "Built using Wails (https://wails.io)"
+  },
+  "wailsjsdir": "./frontend/src/lib"
+}

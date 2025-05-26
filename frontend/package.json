@@ -1,0 +1,41 @@
+{
+	"name": "frontend",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''"
+	},
+	"devDependencies": {
+		"@lucide/svelte": "^0.482.0",
+		"@sveltejs/adapter-static": "^3.0.8",
+		"@sveltejs/kit": "^2.16.0",
+		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@tailwindcss/vite": "^4.0.0",
+		"bits-ui": "^1.6.1",
+		"clsx": "^2.1.1",
+		"formsnap": "^2.0.1",
+		"mode-watcher": "^1.0.7",
+		"svelte": "^5.0.0",
+		"svelte-sonner": "^1.0.1",
+		"sveltekit-superforms": "^2.25.0",
+		"tailwind-merge": "^3.3.0",
+		"tailwind-variants": "^0.2.1",
+		"tailwindcss": "^4.0.0",
+		"tw-animate-css": "^1.3.0",
+		"vaul-svelte": "1.0.0-next.7",
+		"vite": "^6.2.6"
+	},
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	},
+	"dependencies": {
+		"qrcode-svg": "^1.1.0",
+		"zod": "^3.25.23"
+	}
+}
