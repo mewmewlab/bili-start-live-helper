@@ -13,7 +13,7 @@
   "Info": {
     "companyName": "miRemid",
     "productName": "bili-start-live-helper",
-    "productVersion": "v0.0.1",
+    "productVersion": "v0.0.1-beta",
     "copyright": "Copyright miRemid",
     "comments": "Built using Wails (https://wails.io)"
   },
