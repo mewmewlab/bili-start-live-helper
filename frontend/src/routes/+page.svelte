@@ -48,6 +48,7 @@
                 code: response.code
             }
             toast.success("已开启直播")
+            roomStatus.status = 1
         } catch (error) {
             console.error("Error during startLive:", error);
             toast.error("开启直播失败")
@@ -83,9 +84,6 @@
                         message: response.message,
                         status: response.status
                     }
-                    title = response.title || "";
-                    mainID = response.parent_area_id || -1;
-                    subID = response.area_id || -1;
                 } catch (error) {
                     console.error("Error fetching room status:", error);
                 }
@@ -159,7 +157,7 @@
                 </Select.Content>
             </Select.Root>
         </div>
-        {#if rtmp.addr !== "" }
+        {#if rtmp.addr !== "" && roomStatus.status === 1}
             <Dialog.Root>
                 <Dialog.Trigger class={buttonVariants({ variant: "outline" })}>
                     查看推流码
@@ -178,7 +176,7 @@
                 </Dialog.Content>
             </Dialog.Root>
             <Button onclick={stopLive}>关闭直播</Button>
-        {:else if rtmp.addr === "" && roomStatus.status === 1}
+        {:else if rtmp.addr !== "" && roomStatus.status === 0}
             <Button onclick={startLive}>重新开播</Button>
             <Button onclick={stopLive}>关闭直播</Button>
         {:else}
