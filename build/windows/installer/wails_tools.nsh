@@ -8,16 +8,16 @@
     !define INFO_PROJECTNAME "bili-start-live-helper"
 !endif
 !ifndef INFO_COMPANYNAME
-    !define INFO_COMPANYNAME "My Company Name"
+    !define INFO_COMPANYNAME "miRemid"
 !endif
 !ifndef INFO_PRODUCTNAME
-    !define INFO_PRODUCTNAME "Wails Vite"
+    !define INFO_PRODUCTNAME "bili-start-live-helper"
 !endif
 !ifndef INFO_PRODUCTVERSION
-    !define INFO_PRODUCTVERSION "1.0.0"
+    !define INFO_PRODUCTVERSION "0.0.3"
 !endif
 !ifndef INFO_COPYRIGHT
-    !define INFO_COPYRIGHT "Copyright........."
+    !define INFO_COPYRIGHT "Copyright miRemid"
 !endif
 !ifndef PRODUCT_EXECUTABLE
     !define PRODUCT_EXECUTABLE "${INFO_PROJECTNAME}.exe"
