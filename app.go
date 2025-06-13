@@ -354,7 +354,9 @@ func (a *App) GetRoomStatus(roomID int) (*RoomStatus, error) {
 // so we can call the runtime methods
 func (a *App) startup(ctx context.Context) {
 	a.ctx = ctx
-	if _, err := os.Stat(COOKIES_SAVE_PATH); err == nil {
+	homedir, _ := os.UserHomeDir()
+	configPath := filepath.Join(homedir, ".bili-start-live-helper")
+	if _, err := os.Stat(filepath.Join(configPath, COOKIES_SAVE_PATH)); err == nil {
 		a.loadCSRF()
 		a.loadUserInfo()
 		a.loadRoomInfo()
