@@ -10,3 +10,22 @@
 - 二维码登录，不用你去手动获取cookies
 - 一键开播
 - 更改直播标题和分区
+
+## 编译
+
+鉴于目前macos版本签名问题还未修复，可自行编译使用
+
+编译环境需要：
+- wails v2.10.0
+- NodeJS v22.*
+- pnpm v10
+
+```shell
+brew install wails
+brew install node@22
+npm i -g pnpm
+
+git clone https://github.com/mewmewlab/bili-start-live-helper
+cd bili-start-live-helper
+wails build
+```
