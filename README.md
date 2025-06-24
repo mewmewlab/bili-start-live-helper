@@ -29,3 +29,4 @@ git clone https://github.com/mewmewlab/bili-start-live-helper
 cd bili-start-live-helper
 wails build
 ```
+或者下载Release版本安装后，打开终端执行`sudo xattr -r -d com.apple.quarantine bili-start-live-helper文件路径`命令绕过签名校验
